@@ -7,19 +7,26 @@ import { TextEditorComponent } from './components/text-editor/text-editor.compon
 import { HomeComponent } from './components/home/home.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { FormsModule } from '@angular/forms';
+import { DatebarComponent } from './components/datebar/datebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TextEditorComponent,
     HomeComponent,
-    TextEditorComponent
+    TextEditorComponent,
+    DatebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxEditorModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

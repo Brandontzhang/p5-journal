@@ -8,11 +8,12 @@ import { Editor } from 'ngx-editor';
 })
 export class TextEditorComponent implements OnInit, OnDestroy{
   
-  editor!: Editor;
+  editor: Editor;
   html: string;
 
   constructor() {
-    this.html = "asdasdasdasdd";
+    this.html = "";
+    this.editor = new Editor();
   }
 
   ngOnInit(): void {
@@ -21,6 +22,7 @@ export class TextEditorComponent implements OnInit, OnDestroy{
 
   // make sure to destory the editor
   ngOnDestroy(): void {
+    console.log(this.html);
     this.editor.destroy();
   }
 
