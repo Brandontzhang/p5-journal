@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Editor } from 'ngx-editor';
 
 @Component({
@@ -10,10 +10,14 @@ export class TextEditorComponent implements OnInit, OnDestroy{
   
   editor: Editor;
   html: string;
+  editMode: boolean;
+  title: string;
 
   constructor() {
-    this.html = "";
+    this.html = "hi";
     this.editor = new Editor();
+    this.editMode = false;
+    this.title = "New Section";
   }
 
   ngOnInit(): void {
@@ -22,8 +26,11 @@ export class TextEditorComponent implements OnInit, OnDestroy{
 
   // make sure to destory the editor
   ngOnDestroy(): void {
-    console.log(this.html);
     this.editor.destroy();
+  }
+
+  edit() {
+    this.editMode = !this.editMode;
   }
 
 }

@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { DatebarComponent } from './components/datebar/datebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-
+import { AutoSizeInputModule } from 'ngx-autosize-input';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     NgxEditorModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    AutoSizeInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
