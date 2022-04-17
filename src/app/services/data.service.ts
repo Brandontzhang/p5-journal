@@ -13,20 +13,28 @@ export class DataService {
 
   constructor() {
     this.curDay = new Date();
-    this.month = this.curDay.getUTCMonth() + 1;
+    this.month = this.curDay.getUTCMonth();
     this.day = this.curDay.getUTCDate();
     this.year = this.curDay.getUTCFullYear();
-    this.displayDate = `${this.month}/${this.day}/${this.year}`;
+    this.displayDate = `${this.month + 1}/${this.day}/${this.year}`;
+  }
+
+  setDate(newDate : Date) {
+    this.curDay = newDate;
+    this.month = this.curDay.getUTCMonth();
+    this.day = this.curDay.getUTCDate();
+    this.year = this.curDay.getUTCFullYear();
+    this.displayDate = `${this.month + 1}/${this.day}/${this.year}`;
   }
 
   nextDay() {
-    this.day += 1;
-    this.displayDate = `${this.month}/${this.day}/${this.year}`;
+    let nextDay = new Date(this.year, this.month, this.day + 1);
+    this.setDate(nextDay);
   }
 
   prevDay() {
-    this.day -= 1;
-    this.displayDate = `${this.month}/${this.day}/${this.year}`;
+    let prevDay = new Date(this.year, this.month, this.day - 1);
+    this.setDate(prevDay);
   }
   
 }

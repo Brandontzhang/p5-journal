@@ -1,5 +1,5 @@
-<div>
-  <mat-icon>chevron_left</mat-icon>
-  <span>{{displayDate}}</span>
-  <mat-icon>chevron_right</mat-icon>
+<div class="container">
+  <mat-icon class="arrow" (click)="prevDay()">chevron_left</mat-icon>
+  <span class="date">{{displayDate}}</span>
+  <mat-icon class="arrow" (click)="nextDay()">chevron_right</mat-icon>
 </div>
