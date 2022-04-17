@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TextEditorComponent } from './components/text-editor/text-editor.component';
-import { HomeComponent } from './components/home/home.component';
+import { JournalComponent } from './components/journal/journal.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { FormsModule } from '@angular/forms';
 import { DatebarComponent } from './components/datebar/datebar.component';
@@ -16,7 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     AppComponent,
     TextEditorComponent,
-    HomeComponent,
+    JournalComponent,
     TextEditorComponent,
     DatebarComponent
   ],
