@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JournalComponent implements OnInit {
 
+  editMode : boolean;
+
   constructor() {
-  
+    this.editMode = false;
   }
 
   ngOnInit(): void {
+  }
+
+  edit(event : any) {
+    this.editMode = event;
   }
 
 }

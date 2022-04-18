@@ -1,9 +1,15 @@
+$menuColor:#77ACA2;
+$hoverColor:#63968dfd;
+$textColor: #FFF;
+$editTextColor: #000;
+$editTextBackgroundColor: #FFF;
+
 ::ng-deep {
   .NgxEditor__MenuBar {
-    background-color: #A14B00 !important;
-    color: #FFF;
+    background-color: $menuColor !important;
+    color: $textColor;
     :hover {
-      background-color: #c46513;
+      background-color: $hoverColor;
       transition: background-color 1s ease;
       -moz-transition: background-color 1s ease;
       -webkit-transition: background-color 1s ease;
@@ -11,21 +17,21 @@
   }
 
   .NgxEditor__Dropdown--Selected {
-    background-color: #A14B00 !important;
-    color:#FFF !important;
+    background-color: $menuColor !important;
+    color:$textColor !important;
   }
 
   .NgxEditor__Dropdown.NgxEditor__Dropdown--Selected .NgxEditor__Dropdown--Text, .NgxEditor__Dropdown.NgxEditor__Dropdown--Open .NgxEditor__Dropdown--Text {
-    color: #FFF !important;
+    color: $textColor !important;
   }
 
   .NgxEditor__Dropdown .NgxEditor__Dropdown--Active {
-    background-color: #c46513 !important;
+    background-color: $hoverColor !important;
   }
 
   .NgxEditor__Content {
-    background-color: #B57F50;
-    color: #FFF;
+    background-color: $editTextBackgroundColor;
+    color: $editTextColor;
     min-height: 400px;
   }
 
@@ -35,21 +41,21 @@
   }
 
   .NgxEditor__Dropdown {
-    background-color:#A14B00;
+    background-color:$menuColor;
     :hover {
-      background-color: #c46513 !important;
+      background-color: $hoverColor !important;
       transition: background-color 1s ease !important;
       -moz-transition: background-color 1s ease !important;
       -webkit-transition: background-color 1s ease !important;
     }
     .NgxEditor__Dropdown--Item {
-      background-color:#A14B00;
+      background-color:$menuColor;
     }
   }
 }
 
 :host {
-  color: #FFF;
+  color: $textColor;
 }
 
 .container {
@@ -59,7 +65,7 @@
 }
 
 .sectionTitle {
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid $textColor;
   border-width: 0 0 2px;
   width: fit-content;
   margin-bottom: 20px;
@@ -68,7 +74,7 @@
 .title {
   background: transparent;
   border: none;
-  color: #FFF;
+  color: $textColor;
   font-weight: bolder;
   font-size: 34px;
 }

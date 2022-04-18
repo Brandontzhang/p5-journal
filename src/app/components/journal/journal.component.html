@@ -1,2 +1,3 @@
 <app-datebar></app-datebar>
-<app-text-editor></app-text-editor>
+<app-text-editor [editMode]="editMode"></app-text-editor>
+<app-button-menu (editMode)="edit($event)"></app-button-menu>

@@ -11,6 +11,7 @@ import { DatebarComponent } from './components/datebar/datebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { AutoSizeInputModule } from 'ngx-autosize-input';
+import { ButtonMenuComponent } from './components/button-menu/button-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AutoSizeInputModule } from 'ngx-autosize-input';
     TextEditorComponent,
     JournalComponent,
     TextEditorComponent,
-    DatebarComponent
+    DatebarComponent,
+    ButtonMenuComponent
   ],
   imports: [
     BrowserModule,

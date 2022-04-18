@@ -1,0 +1,17 @@
+$menuColor:#77ACA2;
+$textColor: #FFF;
+
+.menu {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+
+  .menuIcon {
+    color: $textColor;
+    padding: 10px;
+    margin: 10px;
+    background-color: $menuColor;
+    border-radius: 50%;
+    width: fit-content;
+  }
+}

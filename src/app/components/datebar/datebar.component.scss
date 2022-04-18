@@ -4,7 +4,14 @@
 
 .arrow {
   margin: 20px;
-  transform: scale(2.5);
+  transform: scale(2);
+  border-radius: 10%;
+  padding: 5px;
+  background-clip: content-box;
+}
+
+.arrow:hover {
+  background-color: #63968dfd;
 }
 
 .container {
