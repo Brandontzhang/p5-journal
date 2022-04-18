@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Section } from 'src/app/interfaces/section';
+import { SectionService } from 'src/app/services/section.service';
 
 @Component({
   selector: 'app-journal',
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class JournalComponent implements OnInit {
 
   editMode : boolean;
+  section : Section[];
 
-  constructor() {
+  constructor(public sectionService : SectionService) {
     this.editMode = false;
+    this.section = sectionService.getSections();
   }
 
   ngOnInit(): void {
