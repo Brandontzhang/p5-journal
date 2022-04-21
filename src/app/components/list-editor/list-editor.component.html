@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="sectionTitle">
+    <input class="title" autoSizeInput [(ngModel)]="title"/>
+  </div>
+
+  <span *ngIf="editMode" >
+    <div *ngFor="let item of listItems">
+      <input class="title" autoSizeInput [(ngModel)]="item.text"/>
+    </div>
+  </span>
+
+  <span *ngIf="!editMode">
+    <div *ngFor="let item of listItems">
+      <p>{{item.text}}</p>
+    </div>
+  </span>
+</div>

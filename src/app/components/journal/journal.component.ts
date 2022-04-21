@@ -15,7 +15,7 @@ export class JournalComponent implements OnInit {
   sections : Section[];
 
   constructor(public sectionService : SectionService) {
-    this.editMode = false;
+    this.editMode = true;
     this.sections = sectionService.getSections();
   }
 

@@ -18,4 +18,19 @@ export class ListSection extends Section {
     this.listItems = section.listItems;
   }
 
+  getDescription() {
+    return this.description;
+  }
+
+  setDescription(desc : string) {
+    this.description = desc;
+  }
+
+  getListItems() {
+    return this.listItems;
+  }
+
+  setListItems(listItems : ListItem[]) {
+    this.listItems = listItems;
+  }
 }

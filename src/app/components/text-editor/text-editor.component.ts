@@ -10,15 +10,24 @@ import { TextSection } from 'src/app/classes/text-section';
   styleUrls: ['./text-editor.component.scss']
 })
 export class TextEditorComponent implements OnInit, OnDestroy{
-  
-  @Input() editMode: boolean = false;
-
-  @Input() section: Section = new Section();
-
-  textSection! : TextSection;
-  listSection! : ListSection;
 
   editor: Editor;
+  toolbar: any = [
+    // default value
+    ['bold', 'italic'],
+    ['underline', 'strike'],
+    ['code', 'blockquote'],
+    ['ordered_list', 'bullet_list'],
+    [{ heading: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] }],
+    ['link', 'image'],
+    ['text_color', 'background_color'],
+    ['align_left', 'align_center', 'align_right', 'align_justify'],
+  ];
+
+
+  @Input() editMode: boolean = false;
+  @Input() section: Section = new Section();
+  textSection! : TextSection;
   html: string = "";
   title: string = "";
 

@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { AutoSizeInputModule } from 'ngx-autosize-input';
 import { ButtonMenuComponent } from './components/button-menu/button-menu.component';
+import { ListEditorComponent } from './components/list-editor/list-editor.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ButtonMenuComponent } from './components/button-menu/button-menu.compon
     TextEditorComponent,
     DatebarComponent,
     ButtonMenuComponent,
+    ListEditorComponent,
   ],
   imports: [
     BrowserModule,
