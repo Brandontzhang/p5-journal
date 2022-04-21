@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Section } from 'src/app/interfaces/section';
+import { ListSection } from 'src/app/classes/list-section';
+import { Section } from 'src/app/classes/section';
+import { TextSection } from 'src/app/classes/text-section';
 import { SectionService } from 'src/app/services/section.service';
 
 @Component({
@@ -10,11 +12,11 @@ import { SectionService } from 'src/app/services/section.service';
 export class JournalComponent implements OnInit {
 
   editMode : boolean;
-  section : Section[];
+  sections : Section[];
 
   constructor(public sectionService : SectionService) {
     this.editMode = false;
-    this.section = sectionService.getSections();
+    this.sections = sectionService.getSections();
   }
 
   ngOnInit(): void {
@@ -22,6 +24,10 @@ export class JournalComponent implements OnInit {
 
   edit(event : any) {
     this.editMode = event;
+  }
+
+  isTextSection(section : Section) {
+    return section instanceof TextSection;
   }
 
 }

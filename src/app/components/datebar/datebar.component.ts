@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { DateService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-datebar',
@@ -10,8 +10,8 @@ export class DatebarComponent implements OnInit {
 
   displayDate : string;
 
-  constructor(public dateService : DataService) {
-    this.displayDate = dateService.displayDate;
+  constructor(public dateService : DateService) {
+    this.displayDate = dateService.displayDateText();
   }
 
   ngOnInit(): void {
@@ -19,12 +19,12 @@ export class DatebarComponent implements OnInit {
 
   nextDay() {
     this.dateService.nextDay();
-    this.displayDate = this.dateService.displayDate;
+    this.displayDate = this.dateService.displayDateText();
   }
 
   prevDay() {
     this.dateService.prevDay();
-    this.displayDate = this.dateService.displayDate;
+    this.displayDate = this.dateService.displayDateText();
   }
 
 }

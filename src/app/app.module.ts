@@ -20,7 +20,7 @@ import { ButtonMenuComponent } from './components/button-menu/button-menu.compon
     JournalComponent,
     TextEditorComponent,
     DatebarComponent,
-    ButtonMenuComponent
+    ButtonMenuComponent,
   ],
   imports: [
     BrowserModule,

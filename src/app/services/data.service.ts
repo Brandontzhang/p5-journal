@@ -3,13 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class DateService {
 
-  curDay : Date;
-  month : number;
-  day : number;
-  year : number;
-  displayDate : string;
+  private curDay : Date;
+  private month : number;
+  private day : number;
+  private year : number;
+  private displayDate : string;
 
   constructor() {
     this.curDay = new Date();
@@ -35,6 +35,14 @@ export class DataService {
   prevDay() {
     let prevDay = new Date(this.year, this.month, this.day - 1);
     this.setDate(prevDay);
+  }
+
+  displayDateText() {
+    return this.displayDate
+  }
+
+  getDate() {
+    return this.curDay;
   }
   
 }
