@@ -4,6 +4,14 @@ export class Section {
 
   constructor() {
     this.id = 0;
-    this.title = "";
+    this.title = "Section title";
   }
+  
+  getTitle() {
+    return this.title;
+  }
+
+  setTitle(title : string) {
+    this.title = title;
+  } 
 }

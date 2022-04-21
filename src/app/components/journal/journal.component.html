@@ -1,5 +1,5 @@
 <app-datebar></app-datebar>
 <div *ngFor="let section of sections">
-  <app-text-editor *ngIf='isTextSection(section)' [section]="section" [editMode]="editMode"></app-text-editor>
+  <app-text-editor *ngIf="isTextSection(section)" [section]="section" [editMode]="editMode"></app-text-editor>
 </div>
 <app-button-menu (editMode)="edit($event)"></app-button-menu>

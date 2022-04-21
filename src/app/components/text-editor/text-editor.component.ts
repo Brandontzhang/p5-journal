@@ -11,10 +11,10 @@ import { TextSection } from 'src/app/classes/text-section';
 })
 export class TextEditorComponent implements OnInit, OnDestroy{
   
-  @Input()
-  editMode: boolean = false;
-  @Input()
-  section!: Section;
+  @Input() editMode: boolean = false;
+
+  @Input() section: Section = new Section();
+
   textSection! : TextSection;
   listSection! : ListSection;
 
@@ -24,20 +24,19 @@ export class TextEditorComponent implements OnInit, OnDestroy{
 
   constructor() {
     this.editor = new Editor();
-
-    if (this.section instanceof TextSection) {
-      this.textSection = new TextSection();
-      this.textSection.setData(this.section);
-    }
-
-    if (this.section instanceof ListSection) {
-      this.listSection = new ListSection();
-      this.listSection.setData(this.section);
-    }
   }
 
   ngOnInit(): void {
     this.editor = new Editor();
+    if (this.section instanceof TextSection) {
+      this.textSection = new TextSection();
+      this.textSection.setData(this.section);
+      
+      this.title = this.textSection.getTitle();
+      this.html = this.textSection.getText();
+    } else {
+      throw new Error('Wrong section type input');
+    }
   }
 
   ngOnDestroy(): void {

@@ -30,4 +30,8 @@ export class JournalComponent implements OnInit {
     return section instanceof TextSection;
   }
 
+  isListSection(section : Section) {
+    return section instanceof ListSection;
+  }
+
 }
