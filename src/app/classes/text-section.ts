@@ -12,7 +12,7 @@ export class TextSection extends Section {
     this.dateService = new DateService();
 
     this.date = this.dateService.getDate();
-    this.text = ""
+    this.text = "New Section, write something!"
   }
 
   setData(section : TextSection) {
